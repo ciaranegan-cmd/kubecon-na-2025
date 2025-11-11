@@ -1,0 +1,17 @@
+apiVersion: example.crossplane.io/v1
+kind: App
+metadata:
+  annotations:
+    terasky.backstage.io/source-info: >-
+      {"pushToGit":true,"gitBranch":"main","gitRepo":"github.com?owner=ciaranegan-cmd&repo=kubecon-na-2025","gitLayout":"cluster-scoped","basePath":"demo-cluster/ns2/App"}
+    terasky.backstage.io/add-to-catalog: 'true'
+    terasky.backstage.io/owner: group:default/kubernetes-auto-ingested
+    terasky.backstage.io/system: ns2
+    terasky.backstage.io/source-file-url: >-
+      https://github.com/ciaranegan-cmd/kubecon-na-2025/blob/main/demo-cluster/ns2/App/app2.yaml
+  name: app2
+  namespace: ns2
+spec:
+  image: app2image
+  crossplane:
+    compositionUpdatePolicy: Automatic
