@@ -1,0 +1,16 @@
+apiVersion: example.crossplane.io/v1
+kind: App
+metadata:
+  annotations:
+    terasky.backstage.io/source-info: >-
+      {"pushToGit":true,"gitBranch":"main","gitRepo":"github.com?owner=ciaranegan-cmd&repo=kubecon-na-2025","gitLayout":"cluster-scoped","basePath":"demo-cluster/kieransnamspeace/App"}
+    terasky.backstage.io/add-to-catalog: 'true'
+    terasky.backstage.io/owner: group:default/guests
+    terasky.backstage.io/system: kieransnamspeace
+    terasky.backstage.io/source-file-url: >-
+      https://github.com/ciaranegan-cmd/kubecon-na-2025/blob/main/demo-cluster/kieransnamspeace/App/appkieran.yaml
+  name: appkieran
+  namespace: kieransnamspeace
+spec:
+  crossplane:
+    compositionUpdatePolicy: Automatic
